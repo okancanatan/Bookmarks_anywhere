@@ -4,18 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Whale Wallpaper Unlock</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="page-shell">
-    <section class="wallpaper-preview" aria-label="Humpback whale wallpaper preview">
-      <img src="humpback-whale-3840x2160-26121.jpg" alt="A humpback whale breaching from dark ocean water">
+    <section class="wallpaper-preview is-locked" id="wallpaper-preview" aria-label="Humpback whale wallpaper preview">
+      <div class="preview-lock" id="preview-lock">
+        <span class="lock-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </span>
+        <p>Pass the quiz to reveal the wallpaper</p>
+      </div>
+      <img
+        src=""
+        data-src="humpback-whale-3840x2160-26121.jpg"
+        alt="A humpback whale breaching from dark ocean water"
+      >
     </section>
 
     <section class="unlock-panel" aria-labelledby="main-title">
       <p class="eyebrow">Free desktop background</p>
       <h1 id="main-title">Prove you know whales.</h1>
-      <p class="subtitle">Answer every question correctly to unlock the full humpback whale wallpaper download.</p>
+      <p class="subtitle">Answer every question correctly to unlock the full humpback whale wallpaper.</p>
 
       <form class="quiz" id="whale-quiz">
         <fieldset class="question">
@@ -43,7 +59,7 @@
       </form>
 
       <div class="download-lock" id="download-lock">
-        <p id="quiz-result" aria-live="polite">The download is locked until you pass the whale check.</p>
+        <p id="quiz-result" aria-live="polite">The wallpaper is locked until you pass the whale check.</p>
         <a class="download-button" id="download-link" href="humpback-whale-3840x2160-26121.jpg" download hidden>
           Download wallpaper
         </a>

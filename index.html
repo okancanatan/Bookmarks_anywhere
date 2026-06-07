@@ -4,68 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Whale Wallpaper Unlock</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page-shell">
-    <section class="wallpaper-preview is-locked" id="wallpaper-preview" aria-label="Humpback whale wallpaper preview">
-      <div class="preview-lock" id="preview-lock">
-        <span class="lock-icon" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-          </svg>
-        </span>
-        <p>Pass the quiz to reveal the wallpaper</p>
-      </div>
-      <img
-        src=""
-        data-src="humpback-whale-3840x2160-26121.jpg"
-        alt="A humpback whale breaching from dark ocean water"
-      >
-    </section>
+  <div class="container">
+    <main class="layout">
+      <section class="card preview-card is-locked" id="wallpaper-preview" aria-label="Wallpaper preview">
+        <div class="preview-frame">
+          <div class="preview-placeholder" aria-hidden="true"></div>
+          <div class="preview-lock" id="preview-lock">
+            <div class="preview-lock-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <p class="preview-lock-title">Wallpaper locked</p>
+            <p class="preview-lock-hint">Answer all questions correctly to unlock</p>
+          </div>
+          <img
+            class="preview-image"
+            src=""
+            data-src="humpback-whale-3840x2160-26121.jpg"
+            alt="A humpback whale breaching from dark ocean water"
+            hidden
+          >
+        </div>
+      </section>
 
-    <section class="unlock-panel" aria-labelledby="main-title">
-      <p class="eyebrow">Free desktop background</p>
-      <h1 id="main-title">Prove you know whales.</h1>
-      <p class="subtitle">Answer every question correctly to unlock the full humpback whale wallpaper.</p>
+      <section class="card quiz-card" aria-labelledby="main-title">
+        <div class="card-header">
+          <span class="badge badge-secondary">Free desktop background</span>
+          <h1 class="card-title" id="main-title">Prove you know whales</h1>
+          <p class="card-description">Answer every question correctly to unlock the humpback whale wallpaper download.</p>
+        </div>
 
-      <form class="quiz" id="whale-quiz">
-        <fieldset class="question">
-          <legend>1. What do humpback whales use baleen for?</legend>
-          <label><input type="radio" name="q1" value="wrong"> Cutting through ice</label>
-          <label><input type="radio" name="q1" value="right"> Filtering tiny prey from seawater</label>
-          <label><input type="radio" name="q1" value="wrong"> Steering while swimming</label>
-        </fieldset>
+        <div class="card-content">
+          <span class="badge badge-outline" id="quiz-progress" aria-live="polite">0 of 3 answered</span>
 
-        <fieldset class="question">
-          <legend>2. What is a famous humpback whale behavior?</legend>
-          <label><input type="radio" name="q2" value="wrong"> Building coral nests</label>
-          <label><input type="radio" name="q2" value="wrong"> Walking on beaches</label>
-          <label><input type="radio" name="q2" value="right"> Singing complex songs</label>
-        </fieldset>
+          <form class="quiz" id="whale-quiz">
+            <fieldset class="question">
+              <legend class="question-label">What do humpback whales use baleen for?</legend>
+              <div class="radio-group">
+                <label class="radio-item">
+                  <input type="radio" name="q1" value="wrong">
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                  <span class="radio-label">Cutting through ice</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="q1" value="right">
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                  <span class="radio-label">Filtering tiny prey from seawater</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="q1" value="wrong">
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                  <span class="radio-label">Steering while swimming</span>
+                </label>
+              </div>
+            </fieldset>
 
-        <fieldset class="question">
-          <legend>3. What is breaching?</legend>
-          <label><input type="radio" name="q3" value="right"> Leaping out of the water</label>
-          <label><input type="radio" name="q3" value="wrong"> Sleeping on the seafloor</label>
-          <label><input type="radio" name="q3" value="wrong"> Hiding in kelp</label>
-        </fieldset>
+            <fieldset class="question">
+              <legend class="question-label">What is a famous humpback whale behavior?</legend>
+              <div class="radio-group">
+                <label class="radio-item">
+                  <input type="radio" name="q2" value="wrong">
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                  <span class="radio-label">Building coral nests</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="q2" value="wrong">
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                  <span class="radio-label">Walking on beaches</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="q2" value="right">
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                  <span class="radio-label">Singing complex songs</span>
+                </label>
+              </div>
+            </fieldset>
 
-        <button class="primary-button" type="submit">Check answers</button>
-      </form>
+            <fieldset class="question">
+              <legend class="question-label">What is breaching?</legend>
+              <div class="radio-group">
+                <label class="radio-item">
+                  <input type="radio" name="q3" value="right">
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                  <span class="radio-label">Leaping out of the water</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="q3" value="wrong">
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                  <span class="radio-label">Sleeping on the seafloor</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="q3" value="wrong">
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                  <span class="radio-label">Hiding in kelp</span>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
 
-      <div class="download-lock" id="download-lock">
-        <p id="quiz-result" aria-live="polite">The wallpaper is locked until you pass the whale check.</p>
-        <a class="download-button" id="download-link" href="humpback-whale-3840x2160-26121.jpg" download hidden>
-          Download wallpaper
-        </a>
-      </div>
-    </section>
-  </main>
+        <div class="card-footer">
+          <div class="alert" id="download-lock" role="status">
+            <p class="alert-description" id="quiz-result" aria-live="polite">
+              The wallpaper is locked until you pass the whale check.
+            </p>
+            <a
+              class="btn btn-primary download-button"
+              id="download-link"
+              download
+              hidden
+              aria-disabled="true"
+              tabindex="-1"
+            >
+              Download wallpaper
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>

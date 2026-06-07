@@ -3,19 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World</title>
+  <title>Whale Wallpaper Unlock</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="page-shell">
-    <section class="hello-panel" aria-labelledby="main-title">
-      <p class="eyebrow">A tiny static website</p>
-      <h1 id="main-title">Hello World</h1>
-      <p class="subtitle">Simple, clean, and ready for whatever you want to build next.</p>
-      <button class="spark-button" type="button" aria-label="Refresh the greeting">
-        Refresh greeting
-      </button>
-      <p class="microcopy" id="daily-note" aria-live="polite"></p>
+    <section class="wallpaper-preview" aria-label="Humpback whale wallpaper preview">
+      <img src="humpback-whale-3840x2160-26121.jpg" alt="A humpback whale breaching from dark ocean water">
+    </section>
+
+    <section class="unlock-panel" aria-labelledby="main-title">
+      <p class="eyebrow">Free desktop background</p>
+      <h1 id="main-title">Prove you know whales.</h1>
+      <p class="subtitle">Answer every question correctly to unlock the full humpback whale wallpaper download.</p>
+
+      <form class="quiz" id="whale-quiz">
+        <fieldset class="question">
+          <legend>1. What do humpback whales use baleen for?</legend>
+          <label><input type="radio" name="q1" value="wrong"> Cutting through ice</label>
+          <label><input type="radio" name="q1" value="right"> Filtering tiny prey from seawater</label>
+          <label><input type="radio" name="q1" value="wrong"> Steering while swimming</label>
+        </fieldset>
+
+        <fieldset class="question">
+          <legend>2. What is a famous humpback whale behavior?</legend>
+          <label><input type="radio" name="q2" value="wrong"> Building coral nests</label>
+          <label><input type="radio" name="q2" value="wrong"> Walking on beaches</label>
+          <label><input type="radio" name="q2" value="right"> Singing complex songs</label>
+        </fieldset>
+
+        <fieldset class="question">
+          <legend>3. What is breaching?</legend>
+          <label><input type="radio" name="q3" value="right"> Leaping out of the water</label>
+          <label><input type="radio" name="q3" value="wrong"> Sleeping on the seafloor</label>
+          <label><input type="radio" name="q3" value="wrong"> Hiding in kelp</label>
+        </fieldset>
+
+        <button class="primary-button" type="submit">Check answers</button>
+      </form>
+
+      <div class="download-lock" id="download-lock">
+        <p id="quiz-result" aria-live="polite">The download is locked until you pass the whale check.</p>
+        <a class="download-button" id="download-link" href="humpback-whale-3840x2160-26121.jpg" download hidden>
+          Download wallpaper
+        </a>
+      </div>
     </section>
   </main>
 
